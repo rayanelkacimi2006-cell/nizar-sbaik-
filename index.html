@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO Meta Tags -->
+  <title>Nizar Sbaik | Restaurant Syrien de Luxe — Hay Al Dakhla, Agadir</title>
+  <meta name="description" content="Découvrez l'authentique gastronomie syrienne chez Nizar Sbaik à Hay Al Dakhla, Agadir. Mezzés d'exception, grillades au charbon de bois, shawarma traditionnel et douceurs levantines." />
+  <meta name="keywords" content="restaurant syrien agadir, nizar sbaik, cuisine syrienne, mezzé syrien, grillades charbon agadir, dakhla agadir restaurant, houmous, chich taouk, shawarma agadir" />
+  <meta name="author" content="Nizar Sbaik Restaurant" />
+  
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:title" content="Nizar Sbaik | Restaurant Syrien de Luxe — Agadir" />
+  <meta property="og:description" content="Découvrez les saveurs authentiques de Damas et d'Alep à Hay Al Dakhla, Agadir." />
+  <meta property="og:type" content="restaurant.restaurant" />
+  <meta property="og:image" content="images/branding/hero-banner.jpg" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="images/branding/favicon.svg" />
+
+  <!-- Google Fonts: Playfair Display, Plus Jakarta Sans, Cairo & Amiri for Arabic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/rtl.css" />
+
+  <!-- Structured Data (JSON-LD) for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Nizar Sbaik",
+    "alternateName": "نزار سبائك",
+    "image": "images/branding/hero-banner.jpg",
+    "servesCuisine": ["Syrian", "Middle Eastern", "Halal"],
+    "priceRange": "40 - 165 MAD",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Agadir",
+      "addressRegion": "Souss-Massa",
+      "streetAddress": "Hay Al Dakhla",
+      "addressCountry": "MA"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- ======================================================================
+       TOP BANNER: OWNER REVIEW NOTICE
+       ====================================================================== -->
+  <div class="owner-notice-banner" id="topBanner" role="alert">
+    <div class="container owner-notice-inner">
+      <div class="owner-notice-text">
+        <span class="owner-notice-icon">ℹ️</span>
+        <span data-i18n="banner_note">
+          Note au propriétaire : Les prix affichés en Dirhams Marocains (MAD) sont des prix indicatifs soumis à validation avant publication • Numéros et horaires en attente de confirmation.
+        </span>
+      </div>
+      <div style="display: flex; gap: 0.5rem; align-items: center;">
+        <button type="button" class="owner-notice-btn trigger-owner-guide" data-i18n="owner_guide_btn">
+          Guide Propriétaire
+        </button>
+        <button type="button" class="owner-notice-btn" id="bannerDismiss" aria-label="Dismiss banner" data-i18n="banner_dismiss">
+          Fermer
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       HEADER & NAVIGATION
+       ====================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container navbar-container">
+      
+      <!-- Brand Logo -->
+      <a href="#home" class="brand-logo-link" aria-label="Nizar Sbaik Home">
+        <img src="images/branding/logo.svg" alt="Nizar Sbaik Syrian Restaurant" class="brand-logo-img" />
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="#home" class="nav-link active" data-i18n="nav_home">Accueil</a>
+        <a href="#about" class="nav-link" data-i18n="nav_story">Notre Histoire</a>
+        <a href="#menu" class="nav-link" data-i18n="nav_menu">Notre Carte</a>
+        <a href="#gallery" class="nav-link" data-i18n="nav_gallery">Galerie</a>
+        <a href="#reservations" class="nav-link" data-i18n="nav_reservations">Réservations</a>
+        <a href="#contact" class="nav-link" data-i18n="nav_contact">Contact & Accès</a>
+      </nav>
+
+      <!-- Header Action Controls -->
+      <div class="header-actions">
+        
+        <!-- Language Selector Dropdown -->
+        <div class="lang-selector-wrapper">
+          <button type="button" class="lang-btn" id="langBtn" aria-expanded="false" aria-haspopup="true">
+            <span id="currentLangLabel">🇫🇷 Français</span>
+            <span style="font-size: 0.75rem;">▼</span>
+          </button>
+          
+          <ul class="lang-dropdown" id="langDropdown" role="menu">
+            <li role="none">
+              <button type="button" class="lang-item-btn" data-lang="ar" role="menuitem">
+                <span>🇸🇦</span> <span>العربية (RTL)</span>
+              </button>
+            </li>
+            <li role="none">
+              <button type="button" class="lang-item-btn active" data-lang="fr" role="menuitem">
+                <span>🇫🇷</span> <span>Français</span>
+              </button>
+            </li>
+            <li role="none">
+              <button type="button" class="lang-item-btn" data-lang="en" role="menuitem">
+                <span>🇬🇧</span> <span>English</span>
+              </button>
+            </li>
+            <li role="none">
+              <button type="button" class="lang-item-btn" data-lang="de" role="menuitem">
+                <span>🇩🇪</span> <span>Deutsch</span>
+              </button>
+            </li>
+            <li role="none">
+              <button type="button" class="lang-item-btn" data-lang="it" role="menuitem">
+                <span>🇮🇹</span> <span>Italiano</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Book Table CTA Button -->
+        <a href="#reservations" class="btn-primary" style="padding: 0.55rem 1.3rem; font-size: 0.9rem;" data-i18n="nav_cta_reserve">
+          Réserver une Table
+        </a>
+
+        <!-- Mobile Navigation Hamburger Toggle -->
+        <button type="button" class="mobile-nav-toggle" id="mobileToggle" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation">
+    <div style="display: flex; flex-direction: column; gap: 2rem;">
+      <img src="images/branding/logo.svg" alt="Nizar Sbaik" style="height: 44px; width: auto;" />
+      
+      <ul class="drawer-nav-list">
+        <li><a href="#home" class="drawer-nav-link" data-i18n="nav_home">Accueil</a></li>
+        <li><a href="#about" class="drawer-nav-link" data-i18n="nav_story">Notre Histoire</a></li>
+        <li><a href="#menu" class="drawer-nav-link" data-i18n="nav_menu">Notre Carte</a></li>
+        <li><a href="#gallery" class="drawer-nav-link" data-i18n="nav_gallery">Galerie</a></li>
+        <li><a href="#reservations" class="drawer-nav-link" data-i18n="nav_reservations">Réservations</a></li>
+        <li><a href="#contact" class="drawer-nav-link" data-i18n="nav_contact">Contact & Accès</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <a href="#reservations" class="btn-primary" style="width: 100%; margin-bottom: 1rem;" data-i18n="nav_cta_reserve">
+        Réserver une Table
+      </a>
+      <p style="color: #999; font-size: 0.8rem; text-align: center;">Hay Al Dakhla, Agadir • Nizar Sbaik</p>
+    </div>
+  </aside>
+
+  <!-- ======================================================================
+       HERO SECTION
+       ====================================================================== -->
+  <section class="hero-section" id="home">
+    <div class="hero-background-wrapper">
+      <img src="images/branding/hero-banner.jpg" alt="Festin Syrien Traditionnel Nizar Sbaik" class="hero-bg-img" />
+      <div class="hero-overlay-gradient"></div>
+    </div>
+
+    <div class="container" style="position: relative; z-index: 5;">
+      <div class="hero-content">
+        
+        <div class="hero-badge-tag">
+          <span style="color: var(--brand-red);">✦</span>
+          <span data-i18n="hero_badge">Restaurant Syrien de Luxe • Hay Al Dakhla, Agadir</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span data-i18n="hero_title">Découvrez l'Authentique Saveur de la Syrie</span>
+        </h1>
+
+        <p class="hero-subtitle" data-i18n="hero_subtitle">
+          Vivez l'expérience des saveurs riches, des recettes traditionnelles et de la chaleureuse hospitalité syrienne au cœur d'Agadir.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#menu" class="btn-primary" data-i18n="hero_btn_menu">
+            Explorer Notre Carte
+          </a>
+          <a href="#reservations" class="btn-secondary" data-i18n="hero_btn_reserve">
+            Réserver une Table
+          </a>
+          <div class="hero-location-pill">
+            <span style="color: #4CAF50;">●</span>
+            <span data-i18n="hero_location_badge">📍 Hay Al Dakhla, Agadir, Maroc</span>
+          </div>
+        </div>
+
+        <!-- Trust Highlights -->
+        <div class="hero-highlights">
+          <div class="hero-highlight-item">
+            <div class="hero-highlight-icon">🌿</div>
+            <div class="hero-highlight-text" data-i18n="hero_feat_spices">Épices fines de Damas et d'Alep</div>
+          </div>
+          <div class="hero-highlight-item">
+            <div class="hero-highlight-icon">🔥</div>
+            <div class="hero-highlight-text" data-i18n="hero_feat_grills">Grillades au charbon de bois</div>
+          </div>
+          <div class="hero-highlight-item">
+            <div class="hero-highlight-icon">✨</div>
+            <div class="hero-highlight-text" data-i18n="hero_feat_fresh">Ingrédients frais & fait maison</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       ABOUT SECTION / OUR STORY
+       ====================================================================== -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        
+        <!-- Left Image Collage -->
+        <div class="about-image-collage">
+          <div class="about-main-img-card">
+            <img src="images/branding/about-hospitality.jpg" alt="Art de la table et hospitalité syrienne" class="about-main-img" />
+          </div>
+          <div class="about-floating-card">
+            <div class="floating-card-badge">Tradition Syrienne</div>
+            <div class="floating-card-title">Karam Suri</div>
+            <div class="floating-card-sub">L'hospitalité bienveillante de Damas à Agadir</div>
+          </div>
+        </div>
+
+        <!-- Right Text Content -->
+        <div class="about-text-content">
+          <div style="text-align: left;">
+            <span class="section-badge" data-i18n="about_badge">Gastronomie Levantino-Syrienne</span>
+            <h2 class="section-title" style="text-align: inherit; margin-left: 0;" data-i18n="about_title">
+              Une Passion pour l'Authentique Cuisine Syrienne
+            </h2>
+            <p class="section-subtitle" style="text-align: inherit; margin-bottom: 1.5rem;" data-i18n="about_sub">
+              Un voyage culinaire célébrant les délices de Damas et d'Alep à Agadir
+            </p>
+          </div>
+
+          <p data-i18n="about_p1">
+            Le restaurant Nizar Sbaik rend hommage au grand patrimoine gastronomique de la Syrie. Ici, les recettes séculaires transmises de génération en génération rencontrent la rigueur culinaire et des ingrédients de première fraîcheur.
+          </p>
+          <p data-i18n="about_p2">
+            Chaque plat est élaboré dans le respect le plus pur des traditions levantines : soumak sauvage, mélasse de grenade d'Alep, huile d'olive vierge extra, pistaches croquantes, et cuissons douces ou sur braises ardentes.
+          </p>
+          <p data-i18n="about_p3">
+            Chez Nizar Sbaik, l'hospitalité syrienne (Karam Suri) est un art de vivre. Nous accueillons chaque hôte avec bienveillance et générosité, dans un cadre raffiné et convivial pensé pour vos repas d'affaires, réunions familiales et moments précieux.
+          </p>
+
+          <!-- 4 Pillars of Syrian Gastronomy -->
+          <div class="about-pillars">
+            <div class="pillar-card">
+              <div class="pillar-icon">📜</div>
+              <h3 class="pillar-title" data-i18n="about_pillar1_title">Recettes Traditionnelles</h3>
+              <p class="pillar-desc" data-i18n="about_pillar1_desc">Héritage authentique des grands maîtres cuisiniers de Damas et d'Alep, préservé sans artifice.</p>
+            </div>
+            <div class="pillar-card">
+              <div class="pillar-icon">🌱</div>
+              <h3 class="pillar-title" data-i18n="about_pillar2_title">Ingrédients Nobles & Frais</h3>
+              <p class="pillar-desc" data-i18n="about_pillar2_desc">Légumes du terroir d'Agadir mariés aux épices précieuses, zaatar et mélasse de grenade du Levant.</p>
+            </div>
+            <div class="pillar-card">
+              <div class="pillar-icon">🍢</div>
+              <h3 class="pillar-title" data-i18n="about_pillar3_title">Grillades au Charbon</h3>
+              <p class="pillar-desc" data-i18n="about_pillar3_desc">Saveur braisée incomparable et caramélisation délicate grâce à une cuisson sur charbon naturel.</p>
+            </div>
+            <div class="pillar-card">
+              <div class="pillar-icon">🤝</div>
+              <h3 class="pillar-title" data-i18n="about_pillar4_title">Hospitalité Syrienne</h3>
+              <p class="pillar-desc" data-i18n="about_pillar4_desc">Un accueil chaleureux et une attention de chaque instant pour faire de chaque repas un moment d'exception.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       MENU SECTION
+       ====================================================================== -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      
+      <!-- Section Header -->
+      <div class="section-header">
+        <span class="section-badge" data-i18n="menu_badge">Notre Carte Gastronomique</span>
+        <h2 class="section-title" data-i18n="menu_title">La Carte Signée Nizar Sbaik</h2>
+        <p class="section-subtitle" data-i18n="menu_sub">
+          Mezzés d'exception, viandes savoureuses au charbon et douceurs sucrées du Levant
+        </p>
+      </div>
+
+      <!-- Controls: Search & Category Tabs -->
+      <div class="menu-controls">
+        
+        <!-- Live Search Bar -->
+        <div class="menu-search-wrapper">
+          <span class="menu-search-icon">🔍</span>
+          <input type="search" class="menu-search-input" id="menuSearchInput" 
+                 placeholder="Rechercher un plat (houmous, kebab, pistache, shawarma...)" 
+                 data-i18n-placeholder="menu_search_placeholder" aria-label="Rechercher dans le menu" />
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="menu-category-tabs" id="menuCategoryTabs">
+          <!-- Populated by JavaScript -->
+        </div>
+
+        <!-- Dietary Filter Chips -->
+        <div class="dietary-filters" id="dietaryFilters">
+          <button type="button" class="dietary-chip active" data-dietary="all" data-i18n="menu_filter_all">Tous les Plats</button>
+          <button type="button" class="dietary-chip" data-dietary="vegetarian" data-i18n="menu_filter_veg">Végétarien</button>
+          <button type="button" class="dietary-chip" data-dietary="grill" data-i18n="menu_filter_grill">Grillades Charbon</button>
+          <button type="button" class="dietary-chip" data-dietary="special" data-i18n="menu_filter_special">Spécialités du Chef</button>
+        </div>
+
+        <!-- Sample Price Notice Bar -->
+        <div class="menu-sample-disclaimer">
+          <span class="menu-sample-disclaimer-icon">⚠️</span>
+          <span data-i18n="menu_sample_notice">
+            Tarifs indicatifs en Dirhams marocains (MAD) pour revue propriétaire avant inauguration.
+          </span>
+        </div>
+
+      </div>
+
+      <!-- Dishes Grid -->
+      <div class="menu-grid" id="menuGrid">
+        <!-- Rendered dynamically by js/app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       GALLERY SECTION
+       ====================================================================== -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-badge" style="background: rgba(197, 160, 89, 0.15); color: var(--brand-gold); border-color: var(--brand-gold);" data-i18n="gallery_badge">
+          Galerie Photographique
+        </span>
+        <h2 class="section-title" data-i18n="gallery_title">Atmosphère & Créations Culinaires</h2>
+        <p class="section-subtitle" data-i18n="gallery_sub">
+          Un aperçu visuel de nos spécialités authentiques et de notre cadre chaleureux
+        </p>
+      </div>
+
+      <!-- Gallery Category Filters -->
+      <div class="gallery-filters">
+        <button type="button" class="gallery-filter-btn active" data-gallery-category="all" data-i18n="gallery_tab_all">Tout</button>
+        <button type="button" class="gallery-filter-btn" data-gallery-category="mezzes" data-i18n="gallery_tab_mezzes">Mezzés & Salades</button>
+        <button type="button" class="gallery-filter-btn" data-gallery-category="grills" data-i18n="gallery_tab_grills">Grillades</button>
+        <button type="button" class="gallery-filter-btn" data-gallery-category="sweets" data-i18n="gallery_tab_sweets">Douceurs & Boissons</button>
+        <button type="button" class="gallery-filter-btn" data-gallery-category="ambiance" data-i18n="gallery_tab_ambiance">Ambiance du Restaurant</button>
+      </div>
+
+      <!-- Gallery Grid -->
+      <div class="gallery-masonry" id="galleryGrid">
+        <!-- Rendered by js/app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-label="Visualisation de la photo">
+    <div class="lightbox-content-box">
+      <button type="button" class="lightbox-close-btn" id="lightboxClose" aria-label="Fermer la vue agrandie">&times;</button>
+      <img src="" alt="" id="lightboxImg" class="lightbox-img" />
+      <div id="lightboxCaption" class="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       RESERVATIONS SECTION
+       ====================================================================== -->
+  <section class="reservations-section" id="reservations">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-badge" data-i18n="reserve_badge">Réservation en Ligne</span>
+        <h2 class="section-title" data-i18n="reserve_title">Réservez Votre Table chez Nizar Sbaik</h2>
+        <p class="section-subtitle" data-i18n="reserve_sub">
+          Nous serons ravis de vous recevoir à Hay Al Dakhla, Agadir. Remplissez le formulaire ci-dessous.
+        </p>
+      </div>
+
+      <div class="reservation-wrapper">
+        
+        <!-- Header Bar -->
+        <div class="res-brand-header">
+          <div>
+            <h3 class="res-header-title">Nizar Sbaik • نزار سبائك</h3>
+            <p class="res-header-sub">Hay Al Dakhla, Agadir • Réservation de Table</p>
+          </div>
+          <div style="font-size: 1.8rem; color: var(--brand-gold);">🍽️</div>
+        </div>
+
+        <!-- Form -->
+        <form class="reservation-form" id="reservationForm" novalidate>
+          
+          <!-- Section 6 Brief Notice: Explanation regarding backend setup -->
+          <div class="res-transparency-box">
+            <span class="res-transparency-icon">ℹ️</span>
+            <div class="res-transparency-text" data-i18n="res_notice_unconnected">
+              Transparence : Le serveur de réservation en ligne n'a pas encore été raccordé par le propriétaire. Pour garantir la prise en compte immédiate de votre table, vous pouvez transmettre vos coordonnées directement via WhatsApp.
+            </div>
+          </div>
+
+          <div class="form-grid">
+            
+            <!-- Customer Name -->
+            <div class="form-group">
+              <label for="resName" class="form-label" data-i18n="form_name_label">Nom complet *</label>
+              <input type="text" id="resName" class="form-input" required 
+                     placeholder="Ex: Mohammed Alami" data-i18n-placeholder="form_name_placeholder" />
+              <div class="form-error-msg" data-i18n="form_validation_required">Veuillez renseigner ce champ.</div>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="form-group">
+              <label for="resPhone" class="form-label" data-i18n="form_phone_label">Téléphone / WhatsApp *</label>
+              <input type="tel" id="resPhone" class="form-input" required 
+                     placeholder="Ex: 06 12 34 56 78 ou +212..." data-i18n-placeholder="form_phone_placeholder" />
+              <div class="form-error-msg" data-i18n="form_validation_phone">Veuillez saisir un numéro valide.</div>
+            </div>
+
+            <!-- Reservation Date -->
+            <div class="form-group">
+              <label for="resDate" class="form-label" data-i18n="form_date_label">Date de réservation *</label>
+              <input type="date" id="resDate" class="form-input" required />
+            </div>
+
+            <!-- Time Slot -->
+            <div class="form-group">
+              <label for="resTime" class="form-label" data-i18n="form_time_label">Heure souhaitée *</label>
+              <select id="resTime" class="form-select" required>
+                <!-- Populated by JavaScript -->
+              </select>
+            </div>
+
+            <!-- Guests -->
+            <div class="form-group">
+              <label for="resGuests" class="form-label" data-i18n="form_guests_label">Nombre de convives *</label>
+              <select id="resGuests" class="form-select" required>
+                <option value="1">1 Personne</option>
+                <option value="2" selected>2 Personnes</option>
+                <option value="3">3 Personnes</option>
+                <option value="4">4 Personnes</option>
+                <option value="5">5 Personnes</option>
+                <option value="6">6 Personnes</option>
+                <option value="7">7 Personnes</option>
+                <option value="8">8 Personnes</option>
+                <option value="10">Table de 10 personnes</option>
+                <option value="12+">Grand groupe (12+ personnes)</option>
+              </select>
+            </div>
+
+            <!-- Seating Preference -->
+            <div class="form-group">
+              <label for="resSeating" class="form-label" data-i18n="form_seating_label">Espace préféré</label>
+              <select id="resSeating" class="form-select">
+                <option value="indoor" data-i18n="form_seating_indoor">Salle Principale Raffinée</option>
+                <option value="family" data-i18n="form_seating_family">Espace Familial Privilège</option>
+                <option value="terrace" data-i18n="form_seating_terrace">Terrasse Extérieure</option>
+              </select>
+            </div>
+
+            <!-- Special Requests -->
+            <div class="form-group form-group-full">
+              <label for="resNotes" class="form-label" data-i18n="form_notes_label">Demandes particulières (facultatif)</label>
+              <textarea id="resNotes" class="form-textarea" 
+                        placeholder="Allergies, anniversaire, chaise haute bébé..." 
+                        data-i18n-placeholder="form_notes_placeholder"></textarea>
+            </div>
+
+          </div>
+
+          <div class="form-submit-wrapper">
+            <button type="submit" class="btn-primary form-submit-btn" data-i18n="form_submit">
+              Confirmer la Demande de Réservation
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Reservation Confirmation / Setup Modal (Section 6 Brief Compliance) -->
+  <div class="reservation-modal" id="resModal" role="dialog" aria-modal="true" aria-label="Récapitulatif de réservation">
+    <div class="reservation-modal-box">
+      <div class="res-modal-header">
+        <div class="res-modal-icon">📋</div>
+        <h3 class="res-modal-title" data-i18n="res_modal_title">Récapitulatif de Votre Demande</h3>
+        <p style="color: #666; font-size: 0.9rem;" data-i18n="res_modal_summary">Voici le récapitulatif de votre réservation :</p>
+      </div>
+
+      <div class="res-summary-table" id="resModalSummary">
+        <!-- Rendered by js/app.js -->
+      </div>
+
+      <div class="res-modal-actions">
+        <!-- Direct WhatsApp reservation transmission -->
+        <a href="#" target="_blank" rel="noopener noreferrer" class="res-btn-wa" id="resWhatsAppBtn">
+          <span>💬</span>
+          <span data-i18n="res_btn_whatsapp">Envoyer ma réservation via WhatsApp</span>
+        </a>
+
+        <!-- Brief Section 6 compliance note -->
+        <div class="res-tech-box" data-i18n="res_modal_backend_info">
+          Note technique au propriétaire : Pour enregistrer automatiquement les réservations en base ou par e-mail, configurez l'URL backendEndpoint dans js/config.js. Aucun faux message de succès n'est affiché sans backend réel.
+        </div>
+
+        <button type="button" class="btn-secondary" id="resModalClose" style="color: var(--brand-black); border-color: #888;" data-i18n="res_modal_close">
+          Fermer
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       LOCATION & CONTACT SECTION
+       ====================================================================== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      
+      <div class="section-header">
+        <span class="section-badge" data-i18n="contact_badge">Coordonnées & Accès</span>
+        <h2 class="section-title" data-i18n="contact_title">Nous Trouver à Hay Al Dakhla, Agadir</h2>
+        <p class="section-subtitle" data-i18n="contact_sub">
+          Une escale culinaire syrienne inoubliable au Maroc
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        
+        <!-- Contact Details Cards -->
+        <div class="contact-info-cards">
+          
+          <!-- Neighborhood Address -->
+          <div class="contact-card">
+            <div class="contact-card-icon">📍</div>
+            <div>
+              <h3 class="contact-card-title" data-i18n="contact_loc_title">Adresse & Localisation</h3>
+              <p class="contact-card-text" data-i18n="contact_loc_text">Hay Al Dakhla, Agadir, Maroc</p>
+              <p class="contact-card-sub" data-i18n="contact_loc_note">L'adresse postale précise sera mise à jour dès communication officielle par le propriétaire.</p>
+            </div>
+          </div>
+
+          <!-- Telephone (Unset per brief) -->
+          <div class="contact-card">
+            <div class="contact-card-icon">📞</div>
+            <div>
+              <h3 class="contact-card-title" data-i18n="contact_phone_title">Téléphone direct</h3>
+              <p class="contact-card-text" data-i18n="contact_phone_unset">En attente de confirmation propriétaire (éditable dans config.js)</p>
+              <span class="contact-unset-badge">En attente propriétaire</span>
+            </div>
+          </div>
+
+          <!-- WhatsApp (Unset per brief) -->
+          <div class="contact-card">
+            <div class="contact-card-icon">💬</div>
+            <div>
+              <h3 class="contact-card-title" data-i18n="contact_wa_title">WhatsApp</h3>
+              <p class="contact-card-text" data-i18n="contact_wa_unset">En attente de confirmation propriétaire (éditable dans config.js)</p>
+              <span class="contact-unset-badge">En attente propriétaire</span>
+            </div>
+          </div>
+
+          <!-- Opening Hours (Unset per brief) -->
+          <div class="contact-card">
+            <div class="contact-card-icon">⏰</div>
+            <div>
+              <h3 class="contact-card-title" data-i18n="contact_hours_title">Horaires d'ouverture</h3>
+              <p class="contact-card-text" data-i18n="contact_hours_unset">Les plages horaires officielles seront publiées dès validation par le propriétaire.</p>
+              <span class="contact-unset-badge">En attente propriétaire</span>
+            </div>
+          </div>
+
+          <!-- Integrity Disclaimer per brief -->
+          <p style="font-size: 0.82rem; color: #888; font-style: italic;" data-i18n="contact_disclaimer">
+            Engagement d'intégrité : Conformément au cahier des charges, aucun numéro de téléphone ni horaire inventé n'est publié.
+          </p>
+
+        </div>
+
+        <!-- Google Maps Embed Wrapper -->
+        <div class="contact-map-wrapper">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13764.576822896572!2d-9.563060599999999!3d30.410656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb3b6f1207e11f1%3A0x7d013f9f9b5c3b5!2sDakhla%2C%20Agadir%2080000%2C%20Morocco!5e0!3m2!1sen!2sma!4v1700000000000!5m2!1sen!2sma" 
+            class="map-iframe" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade" 
+            title="Localisation Hay Al Dakhla Agadir">
+          </iframe>
+          <div class="map-action-bar">
+            <span class="map-location-tag">📍 Hay Al Dakhla, Agadir</span>
+            <a href="https://www.google.com/maps/search/?api=1&query=Hay+Al+Dakhla+Agadir+Morocco" 
+               target="_blank" rel="noopener noreferrer" class="btn-primary" 
+               style="padding: 0.45rem 1rem; font-size: 0.85rem;" data-i18n="contact_maps_btn">
+              Voir sur Google Maps (Hay Al Dakhla)
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================================================================
+       FOOTER
+       ====================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="footer-grid">
+        
+        <!-- Brand Description Column -->
+        <div class="footer-brand-col">
+          <img src="images/branding/logo.svg" alt="Nizar Sbaik" class="footer-logo" />
+          <p class="footer-desc" data-i18n="footer_desc">
+            Restaurant syrien haut de gamme célébrant la gastronomie levantine authentique à Hay Al Dakhla, Agadir, Maroc. Recettes traditionnelles et hospitalité bienveillante.
+          </p>
+          <div style="display: flex; gap: 0.8rem; font-size: 1.2rem;">
+            <span>✨</span>
+            <span style="color: var(--brand-gold);">نزار سبائك • مطعم سوري أصيل</span>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_quick_links">Accès Rapide</h4>
+          <ul class="footer-links">
+            <li><a href="#home" class="footer-link" data-i18n="nav_home">Accueil</a></li>
+            <li><a href="#about" class="footer-link" data-i18n="nav_story">Notre Histoire</a></li>
+            <li><a href="#menu" class="footer-link" data-i18n="nav_menu">Notre Carte</a></li>
+            <li><a href="#gallery" class="footer-link" data-i18n="nav_gallery">Galerie</a></li>
+            <li><a href="#reservations" class="footer-link" data-i18n="nav_reservations">Réservations</a></li>
+            <li><a href="#contact" class="footer-link" data-i18n="nav_contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Opening Hours Box -->
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_hours">Horaires</h4>
+          <div class="footer-hours-box">
+            <p style="margin-bottom: 0.6rem;" data-i18n="contact_hours_unset">
+              Les plages horaires officielles seront publiées dès validation par le propriétaire.
+            </p>
+            <p style="color: var(--brand-gold); font-size: 0.8rem;">
+              Service Déjeuner & Dîner
+            </p>
+          </div>
+        </div>
+
+        <!-- Contact & Location Box -->
+        <div>
+          <h4 class="footer-col-title" data-i18n="footer_contact">Contact & Accès</h4>
+          <div class="footer-hours-box">
+            <p><strong>Quartier :</strong> Hay Al Dakhla</p>
+            <p><strong>Ville :</strong> Agadir, Maroc</p>
+            <p style="margin-top: 0.8rem;">
+              <button type="button" class="footer-owner-guide-link trigger-owner-guide" data-i18n="owner_guide_btn">
+                Guide Propriétaire avant Mise en Ligne
+              </button>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <p data-i18n="footer_rights">Tous droits réservés © 2026 Restaurant Syrien Nizar Sbaik.</p>
+        <p data-i18n="footer_crafted">Conception web d'excellence pour la restauration de luxe.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ======================================================================
+       OWNER CONFIGURATION GUIDE MODAL (Page 3 of Brief)
+       ====================================================================== -->
+  <div class="owner-guide-modal" id="ownerGuideModal" role="dialog" aria-modal="true" aria-label="Guide de configuration pour le propriétaire">
+    <div class="owner-guide-box">
+      <button type="button" class="lightbox-close-btn" id="ownerGuideClose" style="top: 15px; right: 20px;">&times;</button>
+      
+      <h3 class="owner-guide-title" data-i18n="owner_guide_title">Guide de Configuration du Site pour le Propriétaire</h3>
+      <p class="owner-guide-intro" data-i18n="owner_guide_intro">
+        Avant l'ouverture officielle au public, veuillez ajuster les éléments suivants dans js/config.js :
+      </p>
+
+      <ul class="owner-checklist">
+        <li class="checklist-item">
+          <strong data-i18n="owner_guide_step1">1. Renseigner les vrais numéros de téléphone et WhatsApp.</strong>
+          <code class="checklist-code">contact: { phone: "+212 5 28 XX XX XX", whatsappNumber: "2126XXXXXXXX" }</code>
+        </li>
+        <li class="checklist-item">
+          <strong data-i18n="owner_guide_step2">2. Valider ou modifier les prix indicatifs de la carte en Dirhams (MAD).</strong>
+          <code class="checklist-code">Dans js/menu-data.js : ajuster les prix et passer samplePricesActive à false.</code>
+        </li>
+        <li class="checklist-item">
+          <strong data-i18n="owner_guide_step3">3. Confirmer les jours et horaires d'ouverture réels.</strong>
+          <code class="checklist-code">openingHours: { isConfirmed: true, lunchHours: "12:00 - 16:00", dinnerHours: "19:00 - 00:00" }</code>
+        </li>
+        <li class="checklist-item">
+          <strong data-i18n="owner_guide_step4">4. Indiquer l'adresse exacte et le lien Google Maps précis à Hay Al Dakhla.</strong>
+          <code class="checklist-code">location: { exactAddress: "Votre adresse exacte", mapsEmbedUrl: "..." }</code>
+        </li>
+        <li class="checklist-item">
+          <strong data-i18n="owner_guide_step5">5. Raccorder le serveur backend ou webhook pour l'automatisation des réservations.</strong>
+          <code class="checklist-code">reservations: { backendEndpoint: "https://votre-domaine.com/api/reservations" }</code>
+        </li>
+      </ul>
+
+      <div style="text-align: center;">
+        <button type="button" class="btn-primary" onclick="document.getElementById('ownerGuideModal').classList.remove('open'); document.body.style.overflow = '';">
+          J'ai compris
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/translations.js"></script>
+  <script src="js/menu-data.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>

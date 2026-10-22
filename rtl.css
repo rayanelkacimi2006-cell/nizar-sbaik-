@@ -1,0 +1,148 @@
+/**
+ * NIZAR SBAIK — LUXURY SYRIAN RESTAURANT
+ * ARABIC RIGHT-TO-LEFT (RTL) STYLESHEET
+ * 
+ * Activated automatically when Arabic language is selected.
+ */
+
+[dir="rtl"] {
+  text-align: right;
+  direction: rtl;
+}
+
+[dir="rtl"] body {
+  font-family: 'Cairo', 'Amiri', 'Tajawal', sans-serif;
+}
+
+[dir="rtl"] .section-title,
+[dir="rtl"] .hero-title,
+[dir="rtl"] .menu-dish-name,
+[dir="rtl"] .res-header-title,
+[dir="rtl"] .res-modal-title,
+[dir="rtl"] .footer-col-title,
+[dir="rtl"] .owner-guide-title {
+  font-family: 'Cairo', 'Amiri', sans-serif;
+  letter-spacing: 0;
+}
+
+/* Navbar */
+[dir="rtl"] .brand-logo-link {
+  flex-direction: row;
+}
+
+[dir="rtl"] .nav-link {
+  font-family: 'Cairo', sans-serif;
+}
+
+[dir="rtl"] .nav-link::after {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .lang-dropdown {
+  right: auto;
+  left: 0;
+}
+
+[dir="rtl"] .lang-item-btn {
+  text-align: right;
+}
+
+/* Mobile Drawer */
+[dir="rtl"] .mobile-drawer {
+  right: auto;
+  left: -100%;
+  border-left: none;
+  border-right: 2px solid var(--brand-gold);
+}
+
+[dir="rtl"] .mobile-drawer.open {
+  left: 0;
+  right: auto;
+}
+
+/* Hero Section */
+[dir="rtl"] .hero-badge-tag {
+  letter-spacing: 0;
+}
+
+[dir="rtl"] .hero-location-pill {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .hero-highlight-item {
+  flex-direction: row;
+}
+
+/* About Section */
+[dir="rtl"] .about-floating-card {
+  right: auto;
+  left: -25px;
+}
+
+[dir="rtl"] .pillar-card {
+  border-left: none;
+  border-right: 4px solid var(--brand-green);
+}
+
+[dir="rtl"] .pillar-card:nth-child(even) {
+  border-left: none;
+  border-right: 4px solid var(--brand-red);
+}
+
+/* Menu Section */
+[dir="rtl"] .menu-search-input {
+  padding: 0.95rem 3.2rem 0.95rem 1.4rem;
+  text-align: right;
+}
+
+[dir="rtl"] .menu-search-icon {
+  left: auto;
+  right: 1.2rem;
+}
+
+[dir="rtl"] .menu-card-tags {
+  left: auto;
+  right: 12px;
+}
+
+[dir="rtl"] .menu-dish-price-box {
+  align-items: flex-start;
+}
+
+/* Reservation Section */
+[dir="rtl"] .form-input,
+[dir="rtl"] .form-select,
+[dir="rtl"] .form-textarea {
+  text-align: right;
+}
+
+[dir="rtl"] .form-select {
+  background-position: left 0.75rem center;
+}
+
+[dir="rtl"] .res-summary-row {
+  flex-direction: row;
+}
+
+/* Contact Section */
+[dir="rtl"] .contact-card {
+  text-align: right;
+}
+
+/* Footer Section */
+[dir="rtl"] .footer-col-title::after {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .footer-link:hover {
+  padding-left: 0;
+  padding-right: 6px;
+}
+
+/* Owner Modal */
+[dir="rtl"] .checklist-item {
+  border-left: none;
+  border-right: 4px solid var(--brand-gold);
+}

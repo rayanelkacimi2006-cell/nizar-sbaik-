@@ -1,0 +1,766 @@
+/**
+ * NIZAR SBAIK — FIVE LANGUAGES TRANSLATION DICTIONARY
+ * 
+ * Supports:
+ * - ar: العربية (Arabic) — RTL
+ * - fr: Français (French) — LTR
+ * - en: English (English) — LTR
+ * - de: Deutsch (German) — LTR
+ * - it: Italiano (Italian) — LTR
+ */
+
+const TRANSLATIONS = {
+  ar: {
+    dir: "rtl",
+    langName: "العربية",
+    
+    // Top banner
+    banner_note: "ملاحظة للمالك: الأسعار المعروضة بالدرهم المغربي (MAD) هي أسعار استرشادية قيد المراجعة قبل الإطلاق الرسمي • أرقام الهاتف وساعات العمل قيد التأكيد.",
+    banner_dismiss: "إغلاق",
+    
+    // Navigation
+    nav_home: "الرئيسية",
+    nav_story: "قصتنا",
+    nav_menu: "قائمة الطعام",
+    nav_gallery: "معرض الصور",
+    nav_reservations: "الحجوزات",
+    nav_contact: "موقعنا والتواصل",
+    nav_cta_reserve: "احجز طاولة",
+    
+    // Hero Section
+    hero_badge: "مطعم سوري فاخر • حي الداخلة، أكادير",
+    hero_title: "اكتشف المذاق السوري الأصيل",
+    hero_subtitle: "عِش تجربة النكهات الغنية، والوصفات التقليدية العريقة، وكرم الضيافة الشامية الأصيلة في قلب أكادير.",
+    hero_btn_menu: "استكشف قائمتنا",
+    hero_btn_reserve: "احجز طاولتك الآن",
+    hero_feat_spices: "بهارات دمشقية وحلبية فاخرة",
+    hero_feat_grills: "مشاوي على الفحم الطبيعي",
+    hero_feat_fresh: "مكونات طازجة ومحضرة يومياً",
+    hero_location_badge: "📍 حي الداخلة، أكادير، المغرب",
+    
+    // About Section
+    about_badge: "أصالة المطبخ الشامي",
+    about_title: "قصة شغف بالطهي السوري الأصيل",
+    about_sub: "رحلة طهي تحتفي بعراقة المائدة الدمشقية والحلبية في أكادير",
+    about_p1: "يحتفي مطعم «نزار سبائك» بروائع فن الطهي السوري العريق، حيث تلتقي التقاليد الموروثة جيلاً بعد جيل مع الدقة في الإعداد وأجود المكونات الطازجة. نحرص على تقديم تجربة تذوق تنقلكم مباشرة إلى أزقة دمشق وحلب العريقة بنكهاتها الساحرة.",
+    about_p2: "نعتمد في تحضير أطباقنا على وصفات تقليدية أصيلة، وتوليفات بهارات بلاد الشام العطرية كالسماق البلدي، ودبس الرمان الطبيعي، وزيت الزيتون البكر، والفستق الحلبي، مع احترام دقيق لأساليب الطهي البطيء والشواء على الفحم الطبيعي.",
+    about_p3: "في مطعم نزار سبائك، نعتبر الضيافة رسالة وكرم النفس مبدأً راسخاً. نسعد باستقبال كل زائر كضيف عزيز في بيتنا، في أجواء دافئة ومريحة تليق بكل من يبحث عن الأصالة والجودة الرفيعة.",
+    about_pillar1_title: "وصفات شامية تقليدية",
+    about_pillar1_desc: "أطباق متوارثة من أعرق تقاليد الطهي في دمشق وحلب مع الحفاظ على مذاقها الأصلي.",
+    about_pillar2_title: "مكونات طازجة وبهارات أصيلة",
+    about_pillar2_desc: "نختار خضرواتنا ولحومنا يومياً بعناية، مع بهارات شائعة مستوردة خصيصاً كالسماق ودبس الرمان.",
+    about_pillar3_title: "شواء على الفحم الطبيعي",
+    about_pillar3_desc: "نكهة الدخان الخفيفة والكرملة المثالية للمشاوي والكباب على لهب الفحم الخشبي.",
+    about_pillar4_title: "كرم الضيافة الشامية",
+    about_pillar4_desc: "استقبال دافئ وخدمة راقية تجعل كل وجبة لحظة مميزة لا تُنسى.",
+
+    // Menu Section
+    menu_badge: "المذاق الشامي الفاخر",
+    menu_title: "قائمة أطباق نزار سبائك",
+    menu_sub: "مقبلات شائعة، مشاوي على الفحم، وأطباق تقليدية محضرة بحرفية",
+    menu_search_placeholder: "ابحث في القائمة (حمص، كباب، فستق، شاورما...)",
+    menu_filter_all: "جميع الأصناف",
+    menu_filter_veg: "خيارات نباتية",
+    menu_filter_grill: "مشاوي الفحم",
+    menu_filter_special: "أطباق الشيف المميزة",
+    menu_sample_notice: "أسعار استرشادية بالدرهم المغربي (MAD) قيد مراجعة المالك قبل الإطلاق الرسمي.",
+    menu_dish_sample_badge: "سعر استرشادي",
+    menu_empty_search: "لم يتم العثور على أطباق تطابق بحثك. جرب كلمة بحث أخرى.",
+
+    // Categories
+    cat_all: "الكل",
+    cat_mezzes: "المقبلات السورية",
+    cat_hummus_mutabbal: "الحمص والمتبل",
+    cat_fattoush_tabbouleh: "الفتوش والتبولة",
+    cat_kibbeh_sambousek: "الكبة والسمبوسك",
+    cat_shawarma: "الشاورما السورية",
+    cat_grills: "المشاوي السورية",
+    cat_mains: "الأطباق التقليدية",
+    cat_desserts: "الحلويات السورية",
+    cat_drinks: "المشروبات التقليدية",
+
+    // Gallery Section
+    gallery_badge: "معرض الصور",
+    gallery_title: "أجواء وأطباق مطعم نزار سبائك",
+    gallery_sub: "لقطات واقعية من أطباقنا الشهية وأجواء الضيافة الشامية الدافئة",
+    gallery_tab_all: "الكل",
+    gallery_tab_mezzes: "المقبلات والسلطات",
+    gallery_tab_grills: "مشاوي الفحم",
+    gallery_tab_sweets: "الحلويات والمشروبات",
+    gallery_tab_ambiance: "الأجواء والضيافة",
+    gallery_close: "إغلاق",
+    gallery_prev: "السابق",
+    gallery_next: "التالي",
+
+    // Reservation Section
+    reserve_badge: "احجز طاولتك",
+    reserve_title: "حجز طاولة في مطعم نزار سبائك",
+    reserve_sub: "يسعدنا استقبالكم في حي الداخلة، أكادير. يرجى ملء النموذج أدناه لتنظيم زيارتكم.",
+    form_name_label: "الاسم الكامل *",
+    form_name_placeholder: "مثال: كريم المنصوري",
+    form_phone_label: "رقم الهاتف / الواتساب *",
+    form_phone_placeholder: "مثال: 0612345678 أو +212...",
+    form_date_label: "تاريخ الحجز *",
+    form_time_label: "الوقت المفضل *",
+    form_time_placeholder: "اختر وقت الحضور",
+    form_guests_label: "عدد الضيوف *",
+    form_guests_placeholder: "اختر عدد الأشخاص",
+    form_seating_label: "مكان الجلوس المفضل",
+    form_seating_indoor: "الصالة الداخلية الفاخرة",
+    form_seating_family: "قسم العائلات الخاص",
+    form_seating_terrace: "الشرفة الخارجية",
+    form_notes_label: "ملاحظات أو طلبات خاصة (اختياري)",
+    form_notes_placeholder: "حساسية طعام معينة، احتفال بمناسبة خاصة، كرسي أطفال...",
+    form_submit: "إرسال طلب الحجز",
+    form_validation_required: "يرجى تعبئة جميع الحقول المطلوبة.",
+    form_validation_phone: "يرجى إدخال رقم هاتف صحيح.",
+    form_validation_date: "يرجى اختيار تاريخ صالح في المستقبل.",
+    
+    // Reservation Backend Transparency Notice (Brief Section 6)
+    res_notice_title: "حالة نظام الحجز الإلكتروني",
+    res_notice_unconnected: "تنبيه الشفافية: لم يتم ربط نظام الحجز بقاعدة بيانات خلفية حتى الآن من قبل مالك المطعم. لضمان عدم ضياع أي طلب، يمكنك إرسال بيانات حجزك مباشرة عبر تطبيق واتساب.",
+    res_modal_title: "تأكيد تفاصيل طلب الحجز",
+    res_modal_summary: "تم إعداد ملخص حجزك بنجاح:",
+    res_btn_whatsapp: "إرسال الحجز مباشرة عبر واتساب",
+    res_modal_backend_info: "إشعار للمالك والتقنيين: لتفعيل استقبال الحجوزات تلقائياً عبر البريد أو الخادم، يرجى تعيين رابط backendEndpoint في ملف js/config.js. لن يتم عرض رسالة نجاح وهمية بدون خادم حقيقي.",
+    res_modal_close: "إغلاق النافذة",
+
+    // Location & Contact Section
+    contact_badge: "موقعنا ومعلومات الاتصال",
+    contact_title: "زورونا في حي الداخلة، أكادير",
+    contact_sub: "نرحب بكم لتذوق أشهى مأكولات المطبخ السوري في بيئة راقية وهادئة",
+    contact_loc_title: "العنوان والموقع",
+    contact_loc_text: "حي الداخلة، أكادير، المملكة المغربية",
+    contact_loc_note: "سيتم تحديث العنوان التفصيلي بدقة فور تثبيته من قبل المالك.",
+    contact_phone_title: "الهاتف المباشر",
+    contact_phone_unset: "قيد المراجعة وتأكيد المالك (قابلة للتعديل في config.js)",
+    contact_wa_title: "واتساب",
+    contact_wa_unset: "قيد المراجعة وتأكيد المالك (قابلة للتعديل في config.js)",
+    contact_hours_title: "أوقات العمل",
+    contact_hours_unset: "سيتم الإعلان عن ساعات العمل الرسمية فور تأكيدها من قبل المالك.",
+    contact_maps_btn: "فتح الموقع على خرائط جوجل (حي الداخلة)",
+    contact_disclaimer: "التزام الشفافية: بناءً على تعليمات المشروع، لم يتم اختراع أي أرقام هواتف أو ساعات عمل أو إحداثيات مصطنعة.",
+
+    // Owner Guide Modal
+    owner_guide_btn: "دليل المالك للتهيئة قبل النشر",
+    owner_guide_title: "دليل تهيئة الموقع للمالك قبل الإطلاق",
+    owner_guide_intro: "قبل نشر الموقع للجمهور، يرجى تحديث البيانات غير المؤكدة في ملف js/config.js:",
+    owner_guide_step1: "1. إضافة رقم الهاتف والواتساب الحقيقي للمطعم.",
+    owner_guide_step2: "2. مراجعة وتعديل أسعار الأطباق بالدرهم المغربي (MAD).",
+    owner_guide_step3: "3. تحديد أوقات العمل الرسمية وأيام الاستقبال.",
+    owner_guide_step4: "4. تحديد العنوان التفصيلي الدقيق ورابط خريطة Google Maps.",
+    owner_guide_step5: "5. ربط خدمة البريد أو الخادم الخلفي (API) لنظام الحجوزات.",
+
+    // Footer
+    footer_desc: "مطعم سوري راقٍ يحتفي بأصالة فنون الطهي الشامي في حي الداخلة، أكادير، المغرب. مأكولات محضرة بمكونات طازجة وكرم ضيافة أصيل.",
+    footer_quick_links: "روابط سريعة",
+    footer_hours: "أوقات العمل",
+    footer_contact: "الاتصال والموقع",
+    footer_rights: "جميع الحقوق محفوظة © 2026 مطعم نزار سبائك السوري.",
+    footer_crafted: "تصميم فاخر وعصري للمطاعم الراقية."
+  },
+
+  fr: {
+    dir: "ltr",
+    langName: "Français",
+    
+    // Top banner
+    banner_note: "Note au propriétaire : Les prix affichés en Dirhams Marocains (MAD) sont des prix indicatifs soumis à validation avant publication • Numéros et horaires en attente de confirmation.",
+    banner_dismiss: "Fermer",
+    
+    // Navigation
+    nav_home: "Accueil",
+    nav_story: "Notre Histoire",
+    nav_menu: "Notre Carte",
+    nav_gallery: "Galerie",
+    nav_reservations: "Réservations",
+    nav_contact: "Contact & Accès",
+    nav_cta_reserve: "Réserver une Table",
+    
+    // Hero Section
+    hero_badge: "Restaurant Syrien de Luxe • Hay Al Dakhla, Agadir",
+    hero_title: "Découvrez l'Authentique Saveur de la Syrie",
+    hero_subtitle: "Vivez l'expérience des saveurs riches, des recettes traditionnelles et de la chaleureuse hospitalité syrienne au cœur d'Agadir.",
+    hero_btn_menu: "Explorer Notre Carte",
+    hero_btn_reserve: "Réserver une Table",
+    hero_feat_spices: "Épices fines de Damas et d'Alep",
+    hero_feat_grills: "Grillades au charbon de bois",
+    hero_feat_fresh: "Ingrédients frais & fait maison",
+    hero_location_badge: "📍 Hay Al Dakhla, Agadir, Maroc",
+    
+    // About Section
+    about_badge: "Gastronomie Levantino-Syrienne",
+    about_title: "Une Passion pour l'Authentique Cuisine Syrienne",
+    about_sub: "Un voyage culinaire célébrant les délices de Damas et d'Alep à Agadir",
+    about_p1: "Le restaurant Nizar Sbaik rend hommage au grand patrimoine gastronomique de la Syrie. Ici, les recettes séculaires transmises de génération en génération rencontrent la rigueur culinaire et des ingrédients de première fraîcheur.",
+    about_p2: "Chaque plat est élaboré dans le respect le plus pur des traditions levantines : soumak sauvage, mélasse de grenade d'Alep, huile d'olive vierge extra, pistaches croquantes, et cuissons douces ou sur braises ardentes.",
+    about_p3: "Chez Nizar Sbaik, l'hospitalité syrienne (Karam Suri) est un art de vivre. Nous accueillons chaque hôte avec bienveillance et générosité, dans un cadre raffiné et convivial pensé pour vos repas d'affaires, réunions familiales et moments précieux.",
+    about_pillar1_title: "Recettes Traditionnelles",
+    about_pillar1_desc: "Héritage authentique des grands maîtres cuisiniers de Damas et d'Alep, préservé sans artifice.",
+    about_pillar2_title: "Ingrédients Nobles & Frais",
+    about_pillar2_desc: "Légumes du terroir d'Agadir mariés aux épices précieuses, zaatar et mélasse de grenade du Levant.",
+    about_pillar3_title: "Grillades au Charbon de Bois",
+    about_pillar3_desc: "Saveur braisée incomparable et caramélisation délicate grâce à une cuisson sur charbon naturel.",
+    about_pillar4_title: "Hospitalité Syrienne",
+    about_pillar4_desc: "Un accueil chaleureux et une attention de chaque instant pour faire de chaque repas un moment d'exception.",
+
+    // Menu Section
+    menu_badge: "Notre Carte Gastronomique",
+    menu_title: "La Carte Signée Nizar Sbaik",
+    menu_sub: "Mezzés d'exception, viandes savoureuses au charbon et douceurs sucrées du Levant",
+    menu_search_placeholder: "Rechercher un plat (houmous, kebab, pistache, shawarma...)",
+    menu_filter_all: "Tous les Plats",
+    menu_filter_veg: "Végétarien",
+    menu_filter_grill: "Grillades Charbon",
+    menu_filter_special: "Spécialités du Chef",
+    menu_sample_notice: "Tarifs indicatifs en Dirhams marocains (MAD) pour revue propriétaire avant inauguration.",
+    menu_dish_sample_badge: "Prix indicatif",
+    menu_empty_search: "Aucun plat ne correspond à votre recherche. Essayez un autre terme.",
+
+    // Categories
+    cat_all: "Tous",
+    cat_mezzes: "Mezzés Syriens",
+    cat_hummus_mutabbal: "Houmous & Moutabal",
+    cat_fattoush_tabbouleh: "Fattouche & Taboulé",
+    cat_kibbeh_sambousek: "Kébbé & Samboussek",
+    cat_shawarma: "Shawarma Syrien",
+    cat_grills: "Grillades Syriennes",
+    cat_mains: "Plats Traditionnels",
+    cat_desserts: "Desserts Syriens",
+    cat_drinks: "Boissons Traditionnelles",
+
+    // Gallery Section
+    gallery_badge: "Galerie Photographique",
+    gallery_title: "Atmosphère & Créations Culinaires",
+    gallery_sub: "Un aperçu visuel de nos spécialités authentiques et de notre cadre chaleureux",
+    gallery_tab_all: "Tout",
+    gallery_tab_mezzes: "Mezzés & Salades",
+    gallery_tab_grills: "Grillades",
+    gallery_tab_sweets: "Douceurs & Boissons",
+    gallery_tab_ambiance: "Ambiance du Restaurant",
+    gallery_close: "Fermer",
+    gallery_prev: "Précédent",
+    gallery_next: "Suivant",
+
+    // Reservation Section
+    reserve_badge: "Réservation en Ligne",
+    reserve_title: "Réservez Votre Table chez Nizar Sbaik",
+    reserve_sub: "Nous serons ravis de vous recevoir à Hay Al Dakhla, Agadir. Remplissez le formulaire ci-dessous.",
+    form_name_label: "Nom complet *",
+    form_name_placeholder: "Ex: Mohammed Alami",
+    form_phone_label: "Téléphone / WhatsApp *",
+    form_phone_placeholder: "Ex: 06 12 34 56 78 ou +212...",
+    form_date_label: "Date de réservation *",
+    form_time_label: "Heure souhaitée *",
+    form_time_placeholder: "Sélectionnez un horaire",
+    form_guests_label: "Nombre de convives *",
+    form_guests_placeholder: "Sélectionnez le nombre de personnes",
+    form_seating_label: "Espace préféré",
+    form_seating_indoor: "Salle Principale Raffinée",
+    form_seating_family: "Espace Familial Privilège",
+    form_seating_terrace: "Terrasse Extérieure",
+    form_notes_label: "Demandes particulières (facultatif)",
+    form_notes_placeholder: "Allergies, anniversaire, chaise haute bébé...",
+    form_submit: "Confirmer la Demande de Réservation",
+    form_validation_required: "Veuillez renseigner tous les champs obligatoires.",
+    form_validation_phone: "Veuillez saisir un numéro de téléphone valide.",
+    form_validation_date: "Veuillez choisir une date future valide.",
+    
+    // Backend Notice
+    res_notice_title: "État du Module de Réservation",
+    res_notice_unconnected: "Transparence : Le serveur de réservation en ligne n'a pas encore été raccordé par le propriétaire. Pour garantir la prise en compte immédiate de votre table, vous pouvez transmettre vos coordonnées directement via WhatsApp.",
+    res_modal_title: "Récapitulatif de Votre Demande",
+    res_modal_summary: "Voici le récapitulatif de votre réservation :",
+    res_btn_whatsapp: "Envoyer ma réservation via WhatsApp",
+    res_modal_backend_info: "Note technique au propriétaire : Pour enregistrer automatiquement les réservations en base ou par e-mail, configurez l'URL backendEndpoint dans js/config.js. Aucun faux message de succès n'est affiché sans backend réel.",
+    res_modal_close: "Fermer",
+
+    // Location & Contact Section
+    contact_badge: "Coordonnées & Accès",
+    contact_title: "Nous Trouver à Hay Al Dakhla, Agadir",
+    contact_sub: "Une escale culinaire syrienne inoubliable au Maroc",
+    contact_loc_title: "Adresse & Localisation",
+    contact_loc_text: "Hay Al Dakhla, Agadir, Maroc",
+    contact_loc_note: "L'adresse postale précise sera mise à jour dès communication officielle par le propriétaire.",
+    contact_phone_title: "Téléphone direct",
+    contact_phone_unset: "En attente de confirmation propriétaire (éditable dans config.js)",
+    contact_wa_title: "WhatsApp",
+    contact_wa_unset: "En attente de confirmation propriétaire (éditable dans config.js)",
+    contact_hours_title: "Horaires d'ouverture",
+    contact_hours_unset: "Les plages horaires officielles seront publiées dès validation par le propriétaire.",
+    contact_maps_btn: "Voir sur Google Maps (Hay Al Dakhla)",
+    contact_disclaimer: "Engagement d'intégrité : Conformément au cahier des charges, aucun numéro de téléphone ni horaire inventé n'est publié.",
+
+    // Owner Guide Modal
+    owner_guide_btn: "Guide Propriétaire avant Mise en Ligne",
+    owner_guide_title: "Guide de Configuration du Site pour le Propriétaire",
+    owner_guide_intro: "Avant l'ouverture officielle au public, veuillez ajuster les éléments suivants dans js/config.js :",
+    owner_guide_step1: "1. Renseigner les vrais numéros de téléphone et WhatsApp.",
+    owner_guide_step2: "2. Valider ou modifier les prix indicatifs de la carte en Dirhams (MAD).",
+    owner_guide_step3: "3. Confirmer les jours et horaires d'ouverture réels.",
+    owner_guide_step4: "4. Indiquer l'adresse exacte et le lien Google Maps précis à Hay Al Dakhla.",
+    owner_guide_step5: "5. Raccorder le serveur backend ou webhook pour l'automatisation des réservations.",
+
+    // Footer
+    footer_desc: "Restaurant syrien haut de gamme célébrant la gastronomie levantine authentique à Hay Al Dakhla, Agadir, Maroc. Recettes traditionnelles et hospitalité bienveillante.",
+    footer_quick_links: "Accès Rapide",
+    footer_hours: "Horaires",
+    footer_contact: "Contact & Accès",
+    footer_rights: "Tous droits réservés © 2026 Restaurant Syrien Nizar Sbaik.",
+    footer_crafted: "Conception web d'excellence pour la restauration de luxe."
+  },
+
+  en: {
+    dir: "ltr",
+    langName: "English",
+    
+    // Top banner
+    banner_note: "Owner Notice: Displayed prices in Moroccan Dirhams (MAD) are sample estimates pending owner review before launch • Contact details and opening hours pending confirmation.",
+    banner_dismiss: "Dismiss",
+    
+    // Navigation
+    nav_home: "Home",
+    nav_story: "Our Story",
+    nav_menu: "Menu",
+    nav_gallery: "Gallery",
+    nav_reservations: "Reservations",
+    nav_contact: "Location & Contact",
+    nav_cta_reserve: "Reserve a Table",
+    
+    // Hero Section
+    hero_badge: "Luxury Syrian Restaurant • Hay Al Dakhla, Agadir",
+    hero_title: "Discover the Authentic Taste of Syria",
+    hero_subtitle: "Experience the Rich Flavors, Traditional Recipes, and Warm Hospitality of Syria in the heart of Agadir.",
+    hero_btn_menu: "Explore Our Menu",
+    hero_btn_reserve: "Reserve a Table",
+    hero_feat_spices: "Damascene & Aleppo fine spices",
+    hero_feat_grills: "Authentic charcoal-flamed grills",
+    hero_feat_fresh: "Fresh daily ingredients & artisanal care",
+    hero_location_badge: "📍 Hay Al Dakhla, Agadir, Morocco",
+    
+    // About Section
+    about_badge: "Levantine Heritage",
+    about_title: "A Celebration of Authentic Syrian Gastronomy",
+    about_sub: "Honoring centuries-old Damascus and Aleppo culinary heritage in Agadir",
+    about_p1: "Nizar Sbaik celebrates the timeless gastronomy of Syria, where heritage recipes passed down across generations unite with culinary precision and prime fresh ingredients. We invite you to an exquisite culinary voyage into the vibrant culinary traditions of Damascus and Aleppo.",
+    about_p2: "Our kitchen honors traditional Syrian culinary craftsmanship: tart wild sumac, authentic Aleppo pomegranate molasses, cold-pressed extra virgin olive oil, fragrant green pistachios, and slow charcoal ember roasting.",
+    about_p3: "At Nizar Sbaik, warm Syrian hospitality (Karam Suri) is at the core of everything we do. We welcome each guest as a cherished friend into our home, offering a sophisticated and comfortable setting tailored for family gatherings, business lunches, and romantic dinners.",
+    about_pillar1_title: "Authentic Heritage Recipes",
+    about_pillar1_desc: "Time-tested recipes from Damascus and Aleppo, prepared faithfully without compromise.",
+    about_pillar2_title: "Prime Ingredients & Spices",
+    about_pillar2_desc: "Fresh Moroccan produce complemented by imported Levant wild sumac and pomegranate molasses.",
+    about_pillar3_title: "Natural Charcoal Grills",
+    about_pillar3_desc: "Distinctive smoky flavor and tender caramelization achieved exclusively over natural wood charcoal.",
+    about_pillar4_title: "Warm Syrian Hospitality",
+    about_pillar4_desc: "Gracious, attentive service rooted in the storied tradition of Levant generosity.",
+
+    // Menu Section
+    menu_badge: "Culinary Offerings",
+    menu_title: "The Nizar Sbaik Digital Menu",
+    menu_sub: "Handcrafted mezzes, charcoal skewers, and traditional Levant comfort specialties",
+    menu_search_placeholder: "Search dishes, ingredients (e.g. Hummus, Kebab, Pistachio)...",
+    menu_filter_all: "All Dishes",
+    menu_filter_veg: "Vegetarian",
+    menu_filter_grill: "Charcoal Grills",
+    menu_filter_special: "Chef Specials",
+    menu_sample_notice: "Sample prices shown in Moroccan Dirhams (MAD) for owner review prior to official launch.",
+    menu_dish_sample_badge: "Sample Price",
+    menu_empty_search: "No dishes matched your search. Try another keyword.",
+
+    // Categories
+    cat_all: "All",
+    cat_mezzes: "Syrian Mezzes",
+    cat_hummus_mutabbal: "Hummus & Mutabbal",
+    cat_fattoush_tabbouleh: "Fattoush & Tabbouleh",
+    cat_kibbeh_sambousek: "Kibbeh & Sambousek",
+    cat_shawarma: "Syrian Shawarma",
+    cat_grills: "Syrian Grills & Platters",
+    cat_mains: "Traditional Main Courses",
+    cat_desserts: "Syrian Desserts",
+    cat_drinks: "Traditional Drinks",
+
+    // Gallery Section
+    gallery_badge: "Visual Showcase",
+    gallery_title: "Atmosphere & Culinary Gallery",
+    gallery_sub: "A curated look into our authentic Syrian dishes and welcoming restaurant ambience",
+    gallery_tab_all: "All",
+    gallery_tab_mezzes: "Mezzes & Salads",
+    gallery_tab_grills: "Charcoal Grills",
+    gallery_tab_sweets: "Sweets & Drinks",
+    gallery_tab_ambiance: "Restaurant Ambiance",
+    gallery_close: "Close",
+    gallery_prev: "Previous",
+    gallery_next: "Next",
+
+    // Reservation Section
+    reserve_badge: "Table Booking",
+    reserve_title: "Reserve Your Table at Nizar Sbaik",
+    reserve_sub: "We look forward to hosting you in Hay Al Dakhla, Agadir. Please submit your details below.",
+    form_name_label: "Full Name *",
+    form_name_placeholder: "e.g. Alexander Vance",
+    form_phone_label: "Phone / WhatsApp *",
+    form_phone_placeholder: "e.g. +212 6XX XX XX XX",
+    form_date_label: "Reservation Date *",
+    form_time_label: "Preferred Time *",
+    form_time_placeholder: "Select dining time",
+    form_guests_label: "Number of Guests *",
+    form_guests_placeholder: "Select party size",
+    form_seating_label: "Preferred Seating Area",
+    form_seating_indoor: "Main Luxury Dining Room",
+    form_seating_family: "Private Family Dining Section",
+    form_seating_terrace: "Outdoor Dining Terrace",
+    form_notes_label: "Special Requests (Optional)",
+    form_notes_placeholder: "Dietary preferences, birthday celebration, high chair...",
+    form_submit: "Submit Reservation Request",
+    form_validation_required: "Please fill in all required fields.",
+    form_validation_phone: "Please enter a valid phone number.",
+    form_validation_date: "Please select a valid future date.",
+    
+    // Backend Notice
+    res_notice_title: "Reservation Service Setup Status",
+    res_notice_unconnected: "Transparency Notice: Online booking backend is pending owner connection. To ensure no booking is missed, you can transmit your reservation directly via WhatsApp.",
+    res_modal_title: "Reservation Request Summary",
+    res_modal_summary: "Your reservation request details:",
+    res_btn_whatsapp: "Send Reservation Directly via WhatsApp",
+    res_modal_backend_info: "Technical Note for Owner: To automatically process reservations via database or email, configure backendEndpoint in js/config.js. No false success message is displayed without a connected backend.",
+    res_modal_close: "Close Window",
+
+    // Location & Contact Section
+    contact_badge: "Location & Contact",
+    contact_title: "Find Us in Hay Al Dakhla, Agadir",
+    contact_sub: "An authentic Levant dining journey in the heart of Morocco",
+    contact_loc_title: "Address & Neighborhood",
+    contact_loc_text: "Hay Al Dakhla, Agadir, Morocco",
+    contact_loc_note: "Precise street address will be published upon owner confirmation.",
+    contact_phone_title: "Telephone",
+    contact_phone_unset: "Pending owner confirmation (editable in config.js)",
+    contact_wa_title: "WhatsApp",
+    contact_wa_unset: "Pending owner confirmation (editable in config.js)",
+    contact_hours_title: "Opening Hours",
+    contact_hours_unset: "Official opening hours will be announced upon owner confirmation.",
+    contact_maps_btn: "Open Google Maps (Hay Al Dakhla)",
+    contact_disclaimer: "Integrity Statement: As mandated by the project brief, contact numbers, hours, and street coordinates are intentionally not fabricated.",
+
+    // Owner Guide Modal
+    owner_guide_btn: "Owner Pre-Launch Setup Guide",
+    owner_guide_title: "Owner Pre-Launch Checklist & Configuration",
+    owner_guide_intro: "Prior to making the website public, please update the placeholder values in js/config.js:",
+    owner_guide_step1: "1. Add the verified restaurant telephone and WhatsApp numbers.",
+    owner_guide_step2: "2. Review and finalize dish sample prices in Moroccan Dirhams (MAD).",
+    owner_guide_step3: "3. Specify confirmed opening hours and service days.",
+    owner_guide_step4: "4. Provide the exact street address and Google Maps pin in Hay Al Dakhla.",
+    owner_guide_step5: "5. Configure your backend reservation webhook or email endpoint.",
+
+    // Footer
+    footer_desc: "Luxury Syrian restaurant celebrating authentic Levantine gastronomy in Hay Al Dakhla, Agadir, Morocco. Fresh daily ingredients, charcoal grills, and gracious hospitality.",
+    footer_quick_links: "Quick Navigation",
+    footer_hours: "Opening Hours",
+    footer_contact: "Contact & Location",
+    footer_rights: "All rights reserved © 2026 Nizar Sbaik Syrian Restaurant.",
+    footer_crafted: "Crafted for luxury gastronomic experiences."
+  },
+
+  de: {
+    dir: "ltr",
+    langName: "Deutsch",
+    
+    // Top banner
+    banner_note: "Hinweis für den Inhaber: Die Preise in Marokkanischen Dirham (MAD) sind Richtpreise zur Überprüfung vor dem Launch • Kontaktdaten und Öffnungszeiten stehen noch aus.",
+    banner_dismiss: "Schließen",
+    
+    // Navigation
+    nav_home: "Startseite",
+    nav_story: "Unsere Geschichte",
+    nav_menu: "Speisekarte",
+    nav_gallery: "Galerie",
+    nav_reservations: "Reservierungen",
+    nav_contact: "Kontakt & Anfahrt",
+    nav_cta_reserve: "Tisch Reservieren",
+    
+    // Hero Section
+    hero_badge: "Syrisches Luxusrestaurant • Hay Al Dakhla, Agadir",
+    hero_title: "Entdecken Sie den Authentischen Geschmack Syriens",
+    hero_subtitle: "Erleben Sie die Vielfalt der Aromen, traditionelle Rezepte und die herzliche syrische Gastfreundschaft im Herzen von Agadir.",
+    hero_btn_menu: "Speisekarte Erkunden",
+    hero_btn_reserve: "Tisch Reservieren",
+    hero_feat_spices: "Edle Gewürze aus Damaskus & Aleppo",
+    hero_feat_grills: "Holzkohle-Grillspezialitäten",
+    hero_feat_fresh: "Täglich frische Zutaten",
+    hero_location_badge: "📍 Hay Al Dakhla, Agadir, Marokko",
+    
+    // About Section
+    about_badge: "Levantinische Tradition",
+    about_title: "Eine Hommage an die Authentische Syrische Gastronomie",
+    about_sub: "Jahrhundertealte kulinarische Meisterschaft aus Damaskus und Aleppo in Agadir",
+    about_p1: "Das Restaurant Nizar Sbaik zelebriert das reiche kulinarische Erbe Syriens. Hier verschmelzen generationenalte Familienrezepte mit kompromissloser Frische und höchster handwerklicher Sorgfalt zu einem einzigartigen Genusserlebnis.",
+    about_p2: "In unserer Küche verwenden wir nur edelste levantinische Zutaten: fruchtigen Sumach, echte Aleppiner Granatapfelmelasse, kaltgepresstes Olivenöl nativ extra und erlesene grüne Pistazien, zubereitet über glühender Naturholzkohle.",
+    about_p3: "Bei Nizar Sbaik steht die syrische Gastfreundschaft (Karam Suri) an erster Stelle. Wir empfangen jeden Gast mit offener Herzlichkeit in einem stilvollen und einladenden Ambiente für besondere Anlässe.",
+    about_pillar1_title: "Traditionelle Rezepturen",
+    about_pillar1_desc: "Authentische Zubereitung nach originalen Methoden aus den Kulturstädten Damaskus und Aleppo.",
+    about_pillar2_title: "Frischeste Zutaten & Gewürze",
+    about_pillar2_desc: "Täglicher Einkauf bester lokaler Produkte, verfeinert mit orientalischen Gewürzen.",
+    about_pillar3_title: "Grillen auf Holzkohle",
+    about_pillar3_desc: "Unverwechselbares Raucharoma und saftiges Fleisch direkt vom Naturholzkohlengrill.",
+    about_pillar4_title: "Syrische Gastfreundschaft",
+    about_pillar4_desc: "Aufmerksamer und herzlicher Service im Geiste der levantinischen Kultur.",
+
+    // Menu Section
+    menu_badge: "Kulinarische Vielfalt",
+    menu_title: "Die Speisekarte von Nizar Sbaik",
+    menu_sub: "Feinste Mezzes, Holzkohle-Spezialitäten und traditionelle Hausgerichte",
+    menu_search_placeholder: "Gericht suchen (z.B. Hummus, Kebab, Pistazie)...",
+    menu_filter_all: "Alle Gerichte",
+    menu_filter_veg: "Vegetarisch",
+    menu_filter_grill: "Holzkohlegrill",
+    menu_filter_special: "Chef-Empfehlungen",
+    menu_sample_notice: "Preise in Marokkanischen Dirham (MAD) als Richtwerte zur Inhaberprüfung vor der Eröffnung.",
+    menu_dish_sample_badge: "Richtpreis",
+    menu_empty_search: "Keine Gerichte für Ihre Suche gefunden. Bitte versuchen Sie einen anderen Begriff.",
+
+    // Categories
+    cat_all: "Alle",
+    cat_mezzes: "Syrische Mezzes",
+    cat_hummus_mutabbal: "Hummus & Mutabbal",
+    cat_fattoush_tabbouleh: "Fattusch & Tabouleh",
+    cat_kibbeh_sambousek: "Kibbeh & Sambousek",
+    cat_shawarma: "Syrisches Shawarma",
+    cat_grills: "Syrische Grillgerichte",
+    cat_mains: "Traditionelle Hauptgerichte",
+    cat_desserts: "Syrische Desserts",
+    cat_drinks: "Traditionelle Getränke",
+
+    // Gallery Section
+    gallery_badge: "Foto-Galerie",
+    gallery_title: "Atmosphäre & Kulinarische Impressionen",
+    gallery_sub: "Einblick in unsere frischen Gerichte und das einladende Restaurant-Ambiente",
+    gallery_tab_all: "Alle",
+    gallery_tab_mezzes: "Mezzes & Salate",
+    gallery_tab_grills: "Grillgerichte",
+    gallery_tab_sweets: "Desserts & Getränke",
+    gallery_tab_ambiance: "Restaurant-Atmosphäre",
+    gallery_close: "Schließen",
+    gallery_prev: "Zurück",
+    gallery_next: "Weiter",
+
+    // Reservation Section
+    reserve_badge: "Tischreservierung",
+    reserve_title: "Reservieren Sie Ihren Tisch bei Nizar Sbaik",
+    reserve_sub: "Wir freuen uns auf Ihren Besuch in Hay Al Dakhla, Agadir. Bitte füllen Sie das Formular aus.",
+    form_name_label: "Vollständiger Name *",
+    form_name_placeholder: "z.B. Maximilian Weber",
+    form_phone_label: "Telefon / WhatsApp *",
+    form_phone_placeholder: "z.B. +212 6XX XX XX XX",
+    form_date_label: "Datum *",
+    form_time_label: "Uhrzeit *",
+    form_time_placeholder: "Uhrzeit wählen",
+    form_guests_label: "Anzahl Gäste *",
+    form_guests_placeholder: "Personenzahl wählen",
+    form_seating_label: "Bevorzugter Bereich",
+    form_seating_indoor: "Eleganter Hauptspeisesaal",
+    form_seating_family: "Familienbereich",
+    form_seating_terrace: "Außenterrasse",
+    form_notes_label: "Besondere Wünsche (optional)",
+    form_notes_placeholder: "Allergien, Geburtstag, Kinderstuhl...",
+    form_submit: "Reservierungsanfrage Senden",
+    form_validation_required: "Bitte füllen Sie alle Pflichtfelder aus.",
+    form_validation_phone: "Bitte geben Sie eine gültige Telefonnummer ein.",
+    form_validation_date: "Bitte wählen Sie ein gültiges Datum in der Zukunft.",
+    
+    // Backend Notice
+    res_notice_title: "Status des Reservierungssystems",
+    res_notice_unconnected: "Transparenzhinweis: Das Online-Backend wurde vom Inhaber noch nicht verknüpft. Um sicherzustellen, dass keine Anfrage verloren geht, können Sie Ihre Reservierung direkt per WhatsApp senden.",
+    res_modal_title: "Zusammenfassung Ihrer Reservierung",
+    res_modal_summary: "Details Ihrer Reservierungsanfrage:",
+    res_btn_whatsapp: "Reservierung Direkt per WhatsApp Senden",
+    res_modal_backend_info: "Technischer Hinweis für den Inhaber: Zur automatischen Verarbeitung tragen Sie die backendEndpoint-URL in js/config.js ein. Ohne echtes Backend wird keine irreführende Bestätigung angezeigt.",
+    res_modal_close: "Schließen",
+
+    // Location & Contact Section
+    contact_badge: "Standort & Kontakt",
+    contact_title: "Besuchen Sie Uns in Hay Al Dakhla, Agadir",
+    contact_sub: "Authentische syrische Gastronomie im Herzen Marokkos",
+    contact_loc_title: "Adresse & Stadtteil",
+    contact_loc_text: "Hay Al Dakhla, Agadir, Marokko",
+    contact_loc_note: "Die genaue Anschrift wird nach offizieller Freigabe durch den Inhaber eingetragen.",
+    contact_phone_title: "Telefon",
+    contact_phone_unset: "Wartet auf Bestätigung durch den Inhaber (anpassbar in config.js)",
+    contact_wa_title: "WhatsApp",
+    contact_wa_unset: "Wartet auf Bestätigung durch den Inhaber (anpassbar in config.js)",
+    contact_hours_title: "Öffnungszeiten",
+    contact_hours_unset: "Öffnungszeiten werden nach Bestätigung durch den Inhaber bekannt gegeben.",
+    contact_maps_btn: "In Google Maps öffnen (Hay Al Dakhla)",
+    contact_disclaimer: "Transparenzversprechen: Gemäß Projektvorgabe werden keine Telefonnummern oder Öffnungszeiten erfunden.",
+
+    // Owner Guide Modal
+    owner_guide_btn: "Inhaber-Leitfaden vor Veröffentlichung",
+    owner_guide_title: "Inhaber-Konfigurationsleitfaden",
+    owner_guide_intro: "Vor der Veröffentlichung der Website pflegen Sie bitte folgende Angaben in js/config.js ein:",
+    owner_guide_step1: "1. Echte Telefon- und WhatsApp-Nummern eintragen.",
+    owner_guide_step2: "2. Richtpreise in Marokkanischen Dirham (MAD) prüfen und anpassen.",
+    owner_guide_step3: "3. Verbindliche Öffnungszeiten und Ruhetage festlegen.",
+    owner_guide_step4: "4. Genaue Straßenadresse und Google-Maps-Standort hinterlegen.",
+    owner_guide_step5: "5. Backend-API-Endpunkt für automatische Tischreservierungen anbinden.",
+
+    // Footer
+    footer_desc: "Gehobenes syrisches Restaurant mit authentischer levantinischer Küche in Hay Al Dakhla, Agadir, Marokko. Frische Zutaten, Holzkohlegrill und herzliche Gastfreundschaft.",
+    footer_quick_links: "Schnellzugriff",
+    footer_hours: "Öffnungszeiten",
+    footer_contact: "Kontakt & Anfahrt",
+    footer_rights: "Alle Rechte vorbehalten © 2026 Syrisches Restaurant Nizar Sbaik.",
+    footer_crafted: "Premium-Webgestaltung für gehobene Gastronomie."
+  },
+
+  it: {
+    dir: "ltr",
+    langName: "Italiano",
+    
+    // Top banner
+    banner_note: "Nota per il proprietario: I prezzi visualizzati in Dirham Marocchini (MAD) sono indicativi in attesa di revisione prima del lancio • Contatti e orari in attesa di conferma.",
+    banner_dismiss: "Chiudi",
+    
+    // Navigation
+    nav_home: "Home",
+    nav_story: "La Nostra Storia",
+    nav_menu: "Menu",
+    nav_gallery: "Galleria",
+    nav_reservations: "Prenotazioni",
+    nav_contact: "Contatti e Posizione",
+    nav_cta_reserve: "Prenota un Tavolo",
+    
+    // Hero Section
+    hero_badge: "Ristorante Siriano di Lusso • Hay Al Dakhla, Agadir",
+    hero_title: "Scoprite l'Autentico Gusto della Siria",
+    hero_subtitle: "Vivete l'esperienza di sapori ricchi, ricette tradizionali e la calorosa ospitalità siriana nel cuore di Agadir.",
+    hero_btn_menu: "Esplora il Menu",
+    hero_btn_reserve: "Prenota un Tavolo",
+    hero_feat_spices: "Pregiate spezie di Damasco e Aleppo",
+    hero_feat_grills: "Cottura tradizionale alla brace viva",
+    hero_feat_fresh: "Ingredienti freschissimi ogni giorno",
+    hero_location_badge: "📍 Hay Al Dakhla, Agadir, Marocco",
+    
+    // About Section
+    about_badge: "Tradizione Levantina",
+    about_title: "Celebrazione dell'Autentica Gastronomia Siriana",
+    about_sub: "Un viaggio culinario tra i sapori storici di Damasco e Aleppo ad Agadir",
+    about_p1: "Il ristorante Nizar Sbaik rende omaggio alla grande cultura gastronomica della Siria. Qui le ricette tramandate di generazione in generazione incontrano ingredienti freschi di altissima qualità e una cura artigianale meticolosa.",
+    about_p2: "Prepariamo ogni piatto nel pieno rispetto delle tradizioni levantine: soumak selvatico, autentica melassa di melograno di Aleppo, olio extravergine d'oliva, pregiati pistacchi verdi e cottura lenta sulla brace di legna.",
+    about_p3: "Presso Nizar Sbaik, l'ospitalità siriana (Karam Suri) è una vera vocazione. Accogliamo ciascun ospite con calore e generosità in un ambiente raffinato, accogliente e perfetto per ogni occasione.",
+    about_pillar1_title: "Ricette Tradizionali",
+    about_pillar1_desc: "Antiche ricette originali tramandate dai maestri culinari di Damasco e Aleppo.",
+    about_pillar2_title: "Ingredienti Freschi e Pregiati",
+    about_pillar2_desc: "Verdure selezionate ogni giorno e spezie originali del Vicino Oriente.",
+    about_pillar3_title: "Cottura a Brace Naturale",
+    about_pillar3_desc: "Inconfondibile sapore affumicato e carni tenerissime cotte su pura carbonella.",
+    about_pillar4_title: "Calorosa Ospitalità",
+    about_pillar4_desc: "Servizio attento e premuroso radicato nella generosità levantina.",
+
+    // Menu Section
+    menu_badge: "La Nostra Cucina",
+    menu_title: "Il Menu di Nizar Sbaik",
+    menu_sub: "Mezze artigianali, spiedini alla brace e intramontabili piatti della tradizione levantina",
+    menu_search_placeholder: "Cerca un piatto (hummus, kebab, pistacchio, shawarma...)",
+    menu_filter_all: "Tutti i Piatti",
+    menu_filter_veg: "Vegetariano",
+    menu_filter_grill: "Alla Brace",
+    menu_filter_special: "Specialità dello Chef",
+    menu_sample_notice: "Prezzi indicativi in Dirham marocchini (MAD) per revisione del proprietario prima del lancio.",
+    menu_dish_sample_badge: "Prezzo indicativo",
+    menu_empty_search: "Nessun piatto trovato. Prova con un altro termine di ricerca.",
+
+    // Categories
+    cat_all: "Tutti",
+    cat_mezzes: "Mezze Siriani",
+    cat_hummus_mutabbal: "Hummus & Mutabbal",
+    cat_fattoush_tabbouleh: "Fattoush & Tabbouleh",
+    cat_kibbeh_sambousek: "Kibbeh & Sambousek",
+    cat_shawarma: "Shawarma Siriano",
+    cat_grills: "Grigliate Siriane",
+    cat_mains: "Piatti Tradizionali",
+    cat_desserts: "Dolci Siriani",
+    cat_drinks: "Bevande Tradizionali",
+
+    // Gallery Section
+    gallery_badge: "Galleria Fotografica",
+    gallery_title: "Atmosfera e Creazioni Culinarie",
+    gallery_sub: "Uno sguardo ai nostri piatti preparati ad arte e all'atmosfera del nostro locale",
+    gallery_tab_all: "Tutto",
+    gallery_tab_mezzes: "Mezze & Insalate",
+    gallery_tab_grills: "Grigliate",
+    gallery_tab_sweets: "Dolci & Bevande",
+    gallery_tab_ambiance: "Atmosfera Locale",
+    gallery_close: "Chiudi",
+    gallery_prev: "Precedente",
+    gallery_next: "Successivo",
+
+    // Reservation Section
+    reserve_badge: "Prenotazione Tavoli",
+    reserve_title: "Prenota il Tuo Tavolo da Nizar Sbaik",
+    reserve_sub: "Saremo lieti di accogliervi a Hay Al Dakhla, Agadir. Compilate il modulo sottostante.",
+    form_name_label: "Nome e Cognome *",
+    form_name_placeholder: "Es: Marco Rossi",
+    form_phone_label: "Telefono / WhatsApp *",
+    form_phone_placeholder: "Es: +212 6XX XX XX XX",
+    form_date_label: "Data della Prenotazione *",
+    form_time_label: "Orario Desiderato *",
+    form_time_placeholder: "Seleziona l'orario",
+    form_guests_label: "Numero di Ospiti *",
+    form_guests_placeholder: "Seleziona numero persone",
+    form_seating_label: "Zona Preferita",
+    form_seating_indoor: "Sala Interna Elegante",
+    form_seating_family: "Area Riservata Famiglie",
+    form_seating_terrace: "Terrazza Esterna",
+    form_notes_label: "Richieste Particolari (facoltativo)",
+    form_notes_placeholder: "Allergie alimentari, compleanno, seggiolone...",
+    form_submit: "Invia Richiesta di Prenotazione",
+    form_validation_required: "Si prega di compilare tutti i campi obbligatori.",
+    form_validation_phone: "Inserire un numero di telefono valido.",
+    form_validation_date: "Selezionare una data futura valida.",
+    
+    // Backend Notice
+    res_notice_title: "Stato del Modulo di Prenotazione",
+    res_notice_unconnected: "Avviso di Trasparenza: Il server di prenotazione online non è ancora stato collegato dal proprietario. Per assicurare la presa in carico del vostro tavolo, potete inviare i dettagli direttamente via WhatsApp.",
+    res_modal_title: "Riepilogo della Tua Richiesta",
+    res_modal_summary: "Dettagli della richiesta di prenotazione:",
+    res_btn_whatsapp: "Invia Prenotazione via WhatsApp",
+    res_modal_backend_info: "Nota tecnica per il proprietario: Per salvare le prenotazioni via database o email, configurare l'URL backendEndpoint in js/config.js. Nessun falso messaggio di successo viene visualizzato in assenza di un backend reale.",
+    res_modal_close: "Chiudi",
+
+    // Location & Contact Section
+    contact_badge: "Posizione e Contatti",
+    contact_title: "Ci Trovate a Hay Al Dakhla, Agadir",
+    contact_sub: "Un viaggio culinario indimenticabile nella cucina levantina in Marocco",
+    contact_loc_title: "Indirizzo & Quartiere",
+    contact_loc_text: "Hay Al Dakhla, Agadir, Marocco",
+    contact_loc_note: "L'indirizzo civico esatto sarà pubblicato dopo la conferma ufficiale del proprietario.",
+    contact_phone_title: "Telefono Diretto",
+    contact_phone_unset: "In attesa di conferma del proprietario (modificabile in config.js)",
+    contact_wa_title: "WhatsApp",
+    contact_wa_unset: "In attesa di conferma del proprietario (modificabile in config.js)",
+    contact_hours_title: "Orari di Apertura",
+    contact_hours_unset: "Gli orari ufficiali saranno annunciati su conferma del proprietario.",
+    contact_maps_btn: "Apri su Google Maps (Hay Al Dakhla)",
+    contact_disclaimer: "Impegno di Trasparenza: In linea con le istruzioni del progetto, non vengono inventati numeri telefonici né orari fittizi.",
+
+    // Owner Guide Modal
+    owner_guide_btn: "Guida Proprietario Prima del Lancio",
+    owner_guide_title: "Guida alla Configurazione per il Proprietario",
+    owner_guide_intro: "Prima di pubblicare il sito, aggiornate le impostazioni nel file js/config.js:",
+    owner_guide_step1: "1. Inserire i numeri reali di telefono e WhatsApp.",
+    owner_guide_step2: "2. Verificare e aggiornare i prezzi indicativi in Dirham (MAD).",
+    owner_guide_step3: "3. Definire gli orari e i giorni di apertura ufficiali.",
+    owner_guide_step4: "4. Inserire l'indirizzo esatto e il link Google Maps a Hay Al Dakhla.",
+    owner_guide_step5: "5. Collegare l'endpoint API backend per le prenotazioni.",
+
+    // Footer
+    footer_desc: "Ristorante siriano di lusso che celebra l'autentica gastronomia levantina a Hay Al Dakhla, Agadir, Marocco. Ingredienti freschi, carni alla brace e generosa ospitalità.",
+    footer_quick_links: "Accesso Rapido",
+    footer_hours: "Orari",
+    footer_contact: "Contatti e Posizione",
+    footer_rights: "Tutti i diritti riservati © 2026 Ristorante Siriano Nizar Sbaik.",
+    footer_crafted: "Design web di prestigio per la ristorazione d'eccellenza."
+  }
+};
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = TRANSLATIONS;
+}
